@@ -1,108 +1,137 @@
-/*!
- * Agate by Taufik Nurrohman <https://github.com/tovic>
- * ----------------------------------------------------
- *
- * #ade5fc
- * #a2fca2
- * #c6b4f0
- * #d36363
- * #fcc28c
- * #fc9b9b
- * #ffa
- * #fff
- * #333
- * #62c8f3
- * #888
- *
- */
+:root {
+    /* navigation sidebar */
+    --sidebar-background: #262626;
+    --sidebar-color: #fcc28c;
+    --sidebar-selected-color: white;
+    --sidebar-width: 20rem;
 
+    /* main content area */
+    --lesson-background: white;
+    --lesson-color: black;
+    --lesson-code-background: rgba(0, 0, 0, 0.1);
+
+    /* code blocks */
+    --code-background: #333;
+}
+
+body {
+    display:grid;
+    font: 16px/1.5 'Source Sans Pro', Sans-Serif;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    padding: 0 0 1em;
+}
+    section header,
+    section nav,
+    section footer {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+article {
+    padding: 0 2em 1em;
+}
+
+section, article {
+    min-height: 100vh;
+}
+
+footer {
+    font-size: 85%;
+}
+
+nav, footer {
+    border-top: solid 1px #fcc28c;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h1, p, ul, ol, pre {
+    margin: 1rem 0;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+    a:hover {
+        border-bottom-color: inherit;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+    }
+
+code {
+    background: var(--lesson-code-background); /* for inline code elements */
+    font: 14px/1.25 'Source Code Pro', monospace;
+}
+    h2 code, h3 code {
+        display: inline-block;
+        font-size: calc(0.85 * 1em);
+        padding: 0 0.25rem;
+    }
+
+#everything-that-is-not-a-lesson {
+    position: fixed;
+    top: 0;
+    width: var(--sidebar-width);
+}
+    #everything-that-is-not-a-lesson ul {
+        padding-left: 1.5em;
+    }
+    #everything-that-is-not-a-lesson,
+    #everything-that-is-not-a-lesson a,
+    #everything-that-is-not-a-lesson a:visited {
+        background: var(--sidebar-background);
+        color: var(--sidebar-color);
+    }
+        #everything-that-is-not-a-lesson .selected,
+        #everything-that-is-not-a-lesson .selected a {
+            color: white;
+            border-bottom-color: white;
+        }
+
+#lesson {
+    background: var(--lesson-background);
+    color: var(--lesson-color);
+    margin-left: var(--sidebar-width);
+    max-width: 50em;
+    min-width: 30em;
+    opacity: 1;
+    transition: opacity 0.15s ease;
+}
+    #lesson.hide {
+        opacity: 0;
+    }
+    #lesson a:hover {
+        border-bottom-color: blue;
+    }
+    #lesson a:visited:hover {
+        border-bottom-color: purple;
+    }
+
+
+/* overrides to the default highlighter.js theme */
 .hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 0.5em;
-  background: #333;
-  color: white;
+    background: var(--code-background);
+    padding: 0.75em;
 }
 
-.hljs-name,
-.hljs-strong {
-  font-weight: bold;
+/* loading animation */
+.fidget-spinner {
+    background-image: none;
+    background-position: initial initial;
+    background-repeat: initial initial;
+    bottom: -5px;
+    display: inline-block;
+    opacity: 0;
+    position: relative;
+    transition: opacity 0.25s ease;
 }
-
-.hljs-code,
-.hljs-emphasis {
-  font-style: italic;
-}
-
-.hljs-tag {
-  color: #62c8f3;
-}
-
-.hljs-variable,
-.hljs-template-variable,
-.hljs-selector-id,
-.hljs-selector-class {
-  color: #ade5fc;
-}
-
-.hljs-string,
-.hljs-bullet {
-  color: #a2fca2;
-}
-
-.hljs-type,
-.hljs-title,
-.hljs-section,
-.hljs-attribute,
-.hljs-quote,
-.hljs-built_in,
-.hljs-builtin-name {
-  color: #ffa;
-}
-
-.hljs-number,
-.hljs-symbol,
-.hljs-bullet {
-  color: #d36363;
-}
-
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-literal {
-  color: #fcc28c;
-}
-
-.hljs-comment,
-.hljs-deletion,
-.hljs-code {
-  color: #888;
-}
-
-.hljs-regexp,
-.hljs-link {
-  color: #c6b4f0;
-}
-
-.hljs-meta {
-  color: #fc9b9b;
-}
-
-.hljs-deletion {
-  background-color: #fc9b9b;
-  color: #333;
-}
-
-.hljs-addition {
-  background-color: #a2fca2;
-  color: #333;
-}
-
-.hljs a {
-  color: inherit;
-}
-
-.hljs a:focus,
-.hljs a:hover {
-  color: inherit;
-  text-decoration: underline;
-}
+    .fidget-spinner.show {
+        opacity: 1;
+    }
