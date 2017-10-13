@@ -10,7 +10,7 @@ The way the site works is to fetch [Markdown](https://daringfireball.net/project
 
 The big advantage of this approach is that it means I can keep the actual lessons in simple text files and edit them using [MacDown](http://macdown.uranusjr.com).
 
-I love that the site is fewer than 70 lines of HTML, 125 lines of CSS, and 70 lines of JavaScript. The focus is on the content, as it should be.
+I love that the site is fewer than 70 lines of HTML, 140 lines of CSS, and 70 lines of JavaScript. The focus is on the content, as it should be.
 
 The disadvantages of this approach are that you can’t link directly to a particular lesson (at least right now; I may add that in the future using the [History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API)) and that Markdown syntax lacks the ability to do things like add `data` attributes to anchor tags, which would have been handy.
 
