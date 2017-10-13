@@ -1,0 +1,39 @@
+# Variable Assignment
+
+In older versions of JavaScript, there was essentially the following one way to declare variables:
+
+    var myVariable = 42;
+
+These variables were (still are, actually) scoped to the function in which they are created (or to the “global” scope if at the top level).
+
+In ES6, we have at our disposal the following 2 new ways to declare variables:
+
+    let myVariable = 42;
+    const myOtherVariable = 'forty two';
+
+We’ll cover changes in how these are scoped in a later lesson, but for now understand the following distinction between them:
+
+- `let` is for variables that you may want to change
+- `const` is for variables that you don’t want to change (immutables)
+
+To appreciate how big of a deal `const` is, the following is what it took in ES5 to approximate its functionality:
+
+    Object.defineProperty(typeof global === 'object' ?
+        global : window, 'myOtherVariable', {
+        value:        'forty two',
+        enumerable:   true,
+        writable:     false,
+        configurable: false
+    });
+
+**Note:** In ES6, neither `let` nor `const` is hoisted.
+
+Versions prior to ES6:
+
+    console.log(x); // logs undefined
+    var x = 1;
+
+ES6:
+
+    console.log(x) // throws a ReferenceError
+    let x = 1
