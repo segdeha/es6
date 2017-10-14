@@ -11,12 +11,14 @@
 ## Variable Assignment
 
 - [`let` on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
+- [`const` on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
 
 ## Arrow Functions
 
 - [Arrow functions on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 - [ES6 In Depth: Arrow Functions](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)
 - [Javascript ES6 — Arrow Functions and Lexical `this`](https://medium.com/@reasoncode/javascript-es6-arrow-functions-and-lexical-this-f2a3e2a5e8c4)
+- [The Many Faces of Functions in JavaScript](https://bocoup.com/blog/the-many-faces-of-functions-in-javascript)
 
 ## Destructuring Assignment
 

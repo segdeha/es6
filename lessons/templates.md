@@ -8,16 +8,16 @@ ES5 and before:
         return title + ' ' + fname + ' ' + 
                lname + ', ' + degree;
     }
-    // returns 'Ms Grace Hopper, PhD'
-    getFullName('Ms', 'Grace', 'Hopper', 'PhD');
+    // returns 'Rear Admiral Grace Hopper, PhD'
+    getFullName('Rear Admiral', 'Grace', 'Hopper', 'PhD');
 
 ES6:
 
     function getFullName(title, fname, lname, degree) {
         return `${title} ${fname} ${lname}, ${degree}`
     }
-    // returns 'Ms Grace Hopper, PhD'
-    getFullName('Ms', 'Grace', 'Hopper', 'PhD')
+    // returns 'Rear Admiral Grace Hopper, PhD'
+    getFullName('Rear Admiral', 'Grace', 'Hopper', 'PhD')
 
 You can even use expressions to populate template tokens!
 

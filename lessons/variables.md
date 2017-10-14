@@ -14,7 +14,7 @@ In ES6, we have at our disposal the following 2 new ways to declare variables:
 We’ll cover changes in how these are scoped in a later lesson, but for now understand the following distinction between them:
 
 - `let` is for variables that you may want to change
-- `const` is for variables that you don’t want to change (immutables)
+- `const` is for variables that you don’t want to change
 
 To appreciate how big of a deal `const` is, the following is what it took in ES5 to approximate its functionality:
 
@@ -25,6 +25,8 @@ To appreciate how big of a deal `const` is, the following is what it took in ES5
         writable:     false,
         configurable: false
     });
+
+This doesn’t mean the value of a `const` can’t change. E.g., you can assign an object to it and then change one of the properties. In other words, the variable is not “immutable” in a technical sense. For full immutability, you can use `Object.freeze` or a library such as [Immutable.js](https://facebook.github.io/immutable-js/).
 
 **Note:** In ES6, neither `let` nor `const` is hoisted.
 
