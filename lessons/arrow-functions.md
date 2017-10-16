@@ -16,7 +16,7 @@ In ES5 and prior, you had the following 2 options for creating functions:
 
     var myOtherFunc = function () {};
 
-The main difference between the above is that `myFunc` is [hoisted](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting) while `myOtherFunc ` is [lazily created when you first use it](http://peter.michaux.ca/articles/lazy-function-definition-pattern).
+The main difference between the above is that `myFunc` is [hoisted](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting) while `myOtherFunc` is not initialized in the interpretation phase, but only in the execution phase.
 
 And, for completeness, you can give lazily declared functions names different from the variable they’re assigned to, as follows:
 
