@@ -26,9 +26,13 @@ To appreciate how big of a deal `const` is, the following is what it took in ES5
         configurable: false
     });
 
-This doesn’t mean the value of a `const` can’t change. E.g., you can assign an object to it and then change one of the properties. In other words, the variable is not “immutable” in a technical sense. For full immutability, you can use `Object.freeze` or a library such as [Immutable.js](https://facebook.github.io/immutable-js/).
+This doesn’t mean the value of a `const` can’t change. E.g., you can assign an object to it and then change one of the properties. In other words, the [variable is not “immutable”](https://mathiasbynens.be/notes/es6-const) in a technical sense. It only means you can only once bind a value to the variable.
 
-**Note:** In ES6, neither `let` nor `const` is hoisted.
+For full immutability, you can use `Object.freeze` or a library such as [Immutable.js](https://facebook.github.io/immutable-js/).
+
+## A Note on Hoisting
+
+In ES6, unlike `var`, neither `let` nor `const` is [hoisted](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting).
 
 Versions prior to ES6:
 
@@ -39,3 +43,5 @@ ES6:
 
     console.log(x) // throws a ReferenceError
     let x = 1
+
+**Note:** A bug in the [ES6 REPL](https://repl.it/languages/babel) will cause the second example not to throw an error. Try that one out in a console to see the correct result.
