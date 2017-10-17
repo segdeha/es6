@@ -26,6 +26,6 @@ The spread operator consists of prepending three dots to an array when passing i
     const nums = [ 7, 42, 99 ]
 
     // logs 49
-    console.log(sum(... nums))
+    console.log(sum(...nums))
 
 Note that the third value of the array in the example above is ignored because there is no named parameter to pick it up. It is, however, still available in the `arguments` object.
