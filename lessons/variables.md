@@ -32,7 +32,7 @@ For full immutability, you can use `Object.freeze` or a library such as [Immutab
 
 ## A Note on Hoisting
 
-In ES6, unlike `var`, neither `let` nor `const` is [hoisted](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting).
+Unlike `var`, neither `let` nor `const` is [hoisted](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting).
 
 Versions prior to ES6:
 
