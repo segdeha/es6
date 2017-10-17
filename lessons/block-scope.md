@@ -13,7 +13,7 @@ The following example should look familiar:
         console.log(y); // logs 2
     }
 
-    printer()
+    printer();
     console.log(x); // logs 1
 
 ES6 adds another scope: block scope. This means you can create variables that are available only inside blocks (e.g., within a conditional or a loop). Blocks are kind of like Vegas. _What happens in blocks stays in blocks!_
