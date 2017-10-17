@@ -68,6 +68,7 @@ a {
 code {
     background: var(--lesson-code-background); /* for inline code elements */
     font: 14px/1.25 'Source Code Pro', monospace;
+    padding: 0 0.25em;
 }
     h2 code, h3 code {
         display: inline-block;
