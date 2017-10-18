@@ -1,6 +1,6 @@
 # Rest & Spread
 
-This one might actually be easier to grasp for people coming from Python where you have [`*args` and `**kwargs`](https://pythontips.com/2013/08/04/args-and-kwargs-in-python-explained/).
+These bear some resemblance to the concepts of [`*args` and `**kwargs`](https://pythontips.com/2013/08/04/args-and-kwargs-in-python-explained/) in Python.
 
 ## Rest
 

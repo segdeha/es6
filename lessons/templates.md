@@ -19,10 +19,22 @@ ES6:
     // returns 'Rear Admiral Grace Hopper, PhD'
     getFullName('Rear Admiral', 'Grace', 'Hopper', 'PhD')
 
-You can even use expressions to populate template tokens!
+You can evaluate expressions to populate template tokens, as shown below:
 
     function showYourWork(num1, num2) {
         return `${num1} + ${num2} = ${num1 + num2}`
+    }
+    // returns '3 + 4 = 7'
+    showYourWork(3, 4)
+
+You can even use the return value from a function!
+
+    function sum(num1, num2) {
+        return num1 + num2
+    }
+
+    function showYourWork(num1, num2) {
+        return `${num1} + ${num2} = ${sum(num1, num2)}`
     }
     // returns '3 + 4 = 7'
     showYourWork(3, 4)
