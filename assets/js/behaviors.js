@@ -8,6 +8,14 @@ import { a as ajax } from './ajax.js'
 import { PrevNextNav } from './next-prev.js'
 
 let handleError = () => {} // no-op for now
+let navLessons = (function () {
+    let lessons = []
+    let lessonLinks = document.querySelectorAll('#everything-that-is-not-a-lesson nav a[data-lesson]')
+    lessonLinks.forEach((link) => {
+        lessons.push(link.dataset.lesson)
+    })
+    return lessons
+}())
 let nonNavLessons = ['colophon']
 let prevNext
 
@@ -17,6 +25,7 @@ function handleClick(evt) {
         document.querySelector('.fidget-spinner').classList.add('show')
         let lesson = evt.target.dataset.lesson
         fetchLesson(lesson).then(renderLesson).catch(handleError)
+        window.history.pushState({}, '', lesson)
         // special case non-nav lessons (currently only 'colophon')
         updateNav(nonNavLessons.includes(lesson) ? '' : lesson)
     }
@@ -64,12 +73,21 @@ function updateNav(lesson) {
     newlySelected && newlySelected.parentNode.classList.add('selected')
 }
 
+function getLessonFromURL() {
+    let pieces = window.location.pathname.split('/')
+    return pieces.length > 2 && navLessons.includes(pieces[2]) ? pieces[2] : 'intro'
+}
+
 function init() {
     let el = document.querySelector('#lesson')
     let nav = document.querySelector('#everything-that-is-not-a-lesson nav')
     // previous/next navigation class (a global var for now)
     prevNext = new PrevNextNav(el, nav)
-    fetchLesson('intro').then(renderLesson).catch(handleError)
+    let lesson = getLessonFromURL()
+    // render 'intro' unless the URL includes a lesson name (e.g., '/es6/variables')
+    fetchLesson(lesson).then(renderLesson).catch(handleError)
+    // special case non-nav lessons (currently only 'colophon')
+    updateNav(nonNavLessons.includes(lesson) ? '' : lesson)
     // only intercept clicks in the <nav>
     document.querySelector('body').addEventListener('click', handleClick)
 }
