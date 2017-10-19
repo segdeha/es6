@@ -39,9 +39,13 @@ Versions prior to ES6:
     console.log(x); // logs undefined
     var x = 1;
 
+**_[Run it](https://repl.it/MsIH)_**
+
 ES6:
 
     console.log(x) // throws a ReferenceError
     let x = 1
+
+**_[Run it](https://repl.it/MsIR/0)_**
 
 **Note:** A bug in the [ES6 REPL](https://repl.it/languages/babel) will cause the second example not to throw an error. Try that one out in a console to see the correct result.

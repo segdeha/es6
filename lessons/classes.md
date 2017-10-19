@@ -36,6 +36,8 @@ Before ES6:
     myDog.move(); // logs 'walk'
     myDog.bark(); // logs 'ruff'
 
+**_[Run it](https://repl.it/MsJG)_**
+
 ES6:
 
     class Animal {
@@ -69,5 +71,7 @@ ES6:
     console.log(myDog.legs) // logs 4
     myDog.move() // logs 'walk'
     myDog.bark() // logs 'ruff'
+
+**_[Run it](https://repl.it/MsJJ)_**
 
 The new syntax is just sugar for the old (including [the pitfalls](https://www.fusionbox.com/blog/detail/ecmascript-6-classes-potential-pitfalls-for-the-python-programmer/575/) therein), but it does read much more clearly.

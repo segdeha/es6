@@ -15,3 +15,4 @@ All codes blocks (such as the example below) can be copied and pasted into and r
     // logs 'I love ES6!'
     console.log(`I ${feeling} ${version}!`)
 
+**_[Run it](https://repl.it/MsHN)_**

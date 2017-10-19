@@ -7,7 +7,11 @@ Similar to Python and other languages, you can now declare default values for pa
     }
     myFunc()
 
+**_[Run it](https://repl.it/MsJn)_**
+
 You can also assign default values when using destructuring assigment on objects.
 
     const { foo = 42, bar = 'forty two' } = { foo: 7 }
     console.log(foo, bar) // logs 7 'forty two'
+
+**_[Run it](https://repl.it/MsJt)_**

@@ -16,6 +16,8 @@ The following example should look familiar:
     printer();
     console.log(x); // logs 1
 
+**_[Run it](https://repl.it/MsJa)_**
+
 ES6 adds another scope: block scope. This means you can create variables that are available only inside blocks (e.g., within a conditional or a loop). Blocks are kind of like Vegas. _What happens in blocks stays in blocks!_
 
     let x = 1
@@ -26,6 +28,8 @@ ES6 adds another scope: block scope. This means you can create variables that ar
     }
 
     console.log(x) // logs 1
+
+**_[Run it](https://repl.it/MsJf)_**
 
 This is especially handy for `for` loops where pre-ES6 the index variable would have leaked into the enclosing scope.
 
@@ -40,3 +44,5 @@ This is especially handy for `for` loops where pre-ES6 the index variable would 
 
     console.log(z) // logs 2
     console.log(i) // throws a ReferenceError
+
+**_[Run it](https://repl.it/MsJi)_**

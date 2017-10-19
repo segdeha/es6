@@ -11,6 +11,8 @@ ES5 and before:
     // returns 'Rear Admiral Grace Hopper, PhD'
     getFullName('Rear Admiral', 'Grace', 'Hopper', 'PhD');
 
+**_[Run it](https://repl.it/MsJR)_**
+
 ES6:
 
     function getFullName(title, fname, lname, degree) {
@@ -19,6 +21,8 @@ ES6:
     // returns 'Rear Admiral Grace Hopper, PhD'
     getFullName('Rear Admiral', 'Grace', 'Hopper', 'PhD')
 
+**_[Run it](https://repl.it/MsJY)_**
+
 You can evaluate expressions to populate template tokens, as shown below:
 
     function showYourWork(num1, num2) {
@@ -26,6 +30,8 @@ You can evaluate expressions to populate template tokens, as shown below:
     }
     // returns '3 + 4 = 7'
     showYourWork(3, 4)
+
+**_[Run it](https://repl.it/MsJ2)_**
 
 You can even use the return value from a function!
 
@@ -38,5 +44,7 @@ You can even use the return value from a function!
     }
     // returns '3 + 4 = 7'
     showYourWork(3, 4)
+
+**_[Run it](https://repl.it/MsJ5)_**
 
 There’s a bunch more you can do with template literals. For more advanced uses, see [the template literals article on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals).

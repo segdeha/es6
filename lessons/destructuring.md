@@ -13,6 +13,8 @@ A simple example follows:
     let { kind, color } = aFruit
     console.log(kind, color) // logs 'Apple' 'Red'
 
+**_[Run it](https://repl.it/MsKA)_**
+
 Object destructuring is a common idiom in [React](https://reactjs.org) components to pull pieces of data from the `props` object.
 
     class List extends Component {
@@ -41,6 +43,8 @@ Array destructuring is very similar to object destructing as demonstrated in the
     let [ kind, color ] = aFruit
     console.log(kind, color) // logs 'Apple' 'Red'
 
+**_[Run it](https://repl.it/MsKG)_**
+
 A real-world use for array destructuring is grabbing the match from regular expression matches, as in the following example:
 
     const str = 'bey@knowles.com'
@@ -49,14 +53,18 @@ A real-world use for array destructuring is grabbing the match from regular expr
     let [, match] = str.match(rgx) || []
     console.log(match) // logs 'knowles.com'
 
+**_[Run it](https://repl.it/MsKJ)_**
+
 A fairly common task in technical interviews is to swap the values for 2 variables as simply as possible. Destructuring elimintates the need to use a temporary variable to do this.
 
 In ES6:
 
     const list = [ 1, 2, 3 ]
-    let [ a, , b ] = list // note: we skip the 2nd value
+    let [ a, , b ] = list; // note: we skip the 2nd value
     [ b, a ] = [ a, b ]
     console.log(a, b) // logs 3 1
+
+**_[Run it](https://repl.it/MsKv)_**
 
 The same operation, before ES6:
 
@@ -64,3 +72,5 @@ The same operation, before ES6:
     var a = list[0], b = list[2];
     var tmp = a; a = b; b = tmp;
     console.log(a, b) // logs 3 1
+
+**_[Run it](https://repl.it/MsKP)_**

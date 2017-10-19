@@ -15,6 +15,8 @@ The rest operator consists of prepending a function parameter with three dots. T
     // logs 'one|two|three'
     console.log(join('|', 'one', 'two', 'three'))
 
+**_[Run it](https://repl.it/MsJw)_**
+
 ## Spread
 
 The spread operator consists of prepending three dots to an array when passing it as a parameter to a function. This “spreads” the array values across the available named parameters.
@@ -27,5 +29,7 @@ The spread operator consists of prepending three dots to an array when passing i
 
     // logs 49
     console.log(sum(...nums))
+
+**_[Run it](https://repl.it/MsJz)_**
 
 Note that the third value of the array in the example above is ignored because there is no named parameter to pick it up. It is, however, still available in the `arguments` object.
