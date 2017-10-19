@@ -5,10 +5,11 @@
  */
 
 import { a as ajax } from './ajax.js'
+import { PrevNextNav } from './next-prev.js'
 
-const handleError = () => {} // no-op for now
-
-const nonNavLessons = ['colophon']
+let handleError = () => {} // no-op for now
+let nonNavLessons = ['colophon']
+let prevNext
 
 function handleClick(evt) {
     if (evt.target.matches('a[data-lesson]')) {
@@ -49,6 +50,7 @@ function renderLesson(md) {
             window.scrollTo(0, 0)
             lesson.classList.remove('hide')
             document.querySelector('.fidget-spinner').classList.remove('show')
+            prevNext.render()
         })
     }, 150)
 }
@@ -63,9 +65,13 @@ function updateNav(lesson) {
 }
 
 function init() {
+    let el = document.querySelector('#lesson')
+    let nav = document.querySelector('#everything-that-is-not-a-lesson nav')
+    // previous/next navigation class (a global var for now)
+    prevNext = new PrevNextNav(el, nav)
     fetchLesson('intro').then(renderLesson).catch(handleError)
     // only intercept clicks in the <nav>
-    document.querySelector('#everything-that-is-not-a-lesson').addEventListener('click', handleClick)
+    document.querySelector('body').addEventListener('click', handleClick)
 }
 
 document.addEventListener('DOMContentLoaded', init)

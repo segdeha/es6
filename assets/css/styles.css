@@ -1,4 +1,8 @@
 :root {
+	/* links */
+	--lesson-link-color: blue;
+	--lesson-link-visited: purple;
+
     /* navigation sidebar */
     --sidebar-background: #262626;
     --sidebar-color: #fcc28c;
@@ -15,7 +19,6 @@
 }
 
 body {
-    display:grid;
     font: 16px/1.5 'Source Sans Pro', Sans-Serif;
     margin: 0;
     padding: 0;
@@ -117,13 +120,39 @@ code {
     #lesson.hide {
         opacity: 0;
     }
-    #lesson a:hover {
-        border-bottom-color: blue;
+    #lesson a {
+	    color: var(--lesson-link-color);
     }
-    #lesson a:visited:hover {
-        border-bottom-color: purple;
+	    #lesson a:hover {
+	        border-bottom-color: blue;
+	    }
+	    #lesson a:visited {
+	        color: var(--lesson-link-visited);
+	    }
+		    #lesson a:visited:hover {
+		        border-bottom-color: purple;
+		    }
+    #lesson nav {
+	    border-color: var(--lesson-color);
     }
-
+	    #lesson nav ul {
+		    display: table;
+		    list-style: none;
+		    margin: 1em 0;
+		    padding: 0;
+		    width: 100%;
+	    }
+		    #lesson nav ul li {
+			    display: table-cell;
+			    width: 50%;
+		    }
+			    #lesson nav ul li a {
+				    font-size: 80%;
+			    }
+			    #lesson nav ul li:first-child {}
+			    #lesson nav ul li:last-child {
+				    text-align: right;
+			    }
 
 /* overrides to the default highlighter.js theme */
 .hljs {
