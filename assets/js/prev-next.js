@@ -28,16 +28,17 @@ export class PrevNextNav {
         let prev = prevLesson && `<a data-lesson="${prevLesson}">← ${prevText}</a>` || ''
         let next = nextLesson && `<a data-lesson="${nextLesson}">${nextText} →</a>` || ''
 
-        let prevNextNav = document.createElement('DIV')
-        prevNextNav.innerHTML = `
-            <nav>
-                <ul>
-                    <li>${prev}</li>
-                    <li>${next}</li>
-                </ul>
-            </nav>
-        `
-
-        this.el.append(prevNextNav)
+        if (prev || next) {
+            let prevNextNav = document.createElement('DIV')
+            prevNextNav.innerHTML = `
+                <nav>
+                    <ul>
+                        <li>${prev}</li>
+                        <li>${next}</li>
+                    </ul>
+                </nav>
+            `
+            this.el.append(prevNextNav)
+        }
     }
 }
