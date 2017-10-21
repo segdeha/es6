@@ -1,7 +1,7 @@
 /**
  * Create dynamic previous/next navigation
  */
-class PrevNextNav {
+export class PrevNextNav {
     /**
      * @param <DOM Element> el Navigable element
      * @param <DOM Element> nav Navigation parent container
@@ -33,5 +33,3 @@ class PrevNextNav {
         this.el.append(prevNextNav)
     }
 }
-
-export { PrevNextNav }
