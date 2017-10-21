@@ -59,6 +59,24 @@ From `behaviors.js`:
 
 ## ES6 Feautres Used
 
+### Modules
+
+I make use of modules to import classes asynchronously.
+
+From the `<head>` element in `index.html`:
+
+    <script defer type="module" src="assets/js/behaviors.js"></script>
+
+From `behaviors.js`:
+
+    import { LessonManager } from './lesson-manager.js'
+    import { Navigation } from './navigation.js'
+
+From `lesson-manager.js`:
+
+    import { a as ajax } from './ajax.js'
+    import { PrevNextNav } from './prev-next.js'
+
 ### Classes
 
 I created 3 classes to encapsulate certain functionality.
@@ -86,19 +104,6 @@ From `navigation.js`:
     export class Navigation {
         static update(lesson) {…}
     }
-
-### Modules
-
-I make use of modules to import classes asynchronously.
-
-From the `<head>` element in `index.html`:
-
-    <script defer type="module" src="assets/js/behaviors.js"></script>
-
-From `behaviors.js`:
-
-    import { LessonManager } from './lesson-manager.js'
-    import { Navigation } from './navigation.js'
 
 ### Arrow functions
 
@@ -157,25 +162,28 @@ From `navigation.js`:
 
 Additionally, this site makes use of some features from the previous version of ECMAScript that make it so [you might not need jQuery](http://youmightnotneedjquery.com/).
 
-From `behaviors.js`:
-
-### `Node.matches`
-
-    if (evt.target.matches('a[data-lesson]')) {…}
-
 ### `Promise`
+
+From `lesson-manager.js`:
 
     return new Promise(function (resolve, reject) {…})
 
-    fetchLesson('intro').then(renderLesson).catch(handleError)
-
 ### `querySelectorAll` & `NodeList.forEach`
+
+From `lesson-manager.js`:
 
     document.querySelectorAll('pre code').forEach((block) => {…})
 
 ### `querySelector` & `classList`
 
-    const newlySelected = document.querySelector(`[data-lesson="${lesson}"]`)
-    newlySelected && newlySelected.parentNode.classList.add('selected')
+From `lesson-manager.js`:
 
-N.B.: It’s technically a CSS 2.1 feature, but the above example also makes uses of attribute selectors.
+    document.querySelector('.fidget-spinner').classList.remove('show')
+
+### `Node.matches`
+
+From `behaviors.js`:
+
+    if (evt.target.matches('a[data-lesson]')) {…}
+
+N.B.: It’s technically a CSS 2.1 feature, but the above example also makes uses of [attribute selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors).
