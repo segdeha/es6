@@ -11,29 +11,25 @@ class PrevNextNav {
         this.nav = nav
     }
 
-    _getPrevLesson() {
-        let prev = this.nav.querySelector('.selected').previousElementSibling
-        let prevLesson = prev && prev.querySelector('a').dataset.lesson || null
-        let prevText = prev && prev.querySelector('a').innerHTML || null
-        return { prevLesson, prevText }
-    }
+    _getLesson(dir) {
+        let el = this.nav.querySelector('.selected')[`${dir}ElementSibling`]
 
-    _getNextLesson() {
-        let next = this.nav.querySelector('.selected').nextElementSibling
-        let nextLesson = next && next.querySelector('a').dataset.lesson || null
-        let nextText = next && next.querySelector('a').innerHTML || null
-        return { nextLesson, nextText }
+        let lesson = el && el.querySelector('a').dataset.lesson || null
+        let text = el && el.querySelector('a').innerHTML || null
+
+        return { lesson, text }
     }
 
     render() {
-        let { prevLesson, prevText } = this._getPrevLesson()
-        let { nextLesson, nextText } = this._getNextLesson()
-        prevText = `← ${prevText}`
-        nextText = `${nextText} →`
-        let prev = prevLesson && `<a data-lesson="${prevLesson}">${prevText}</a>` || ''
-        let next = nextLesson && `<a data-lesson="${nextLesson}">${nextText}</a>` || ''
+        let { lesson: prevLesson, text: prevText } = this._getLesson('previous')
+        let { lesson: nextLesson, text: nextText } = this._getLesson('next')
+
+        let prev = prevLesson && `<a data-lesson="${prevLesson}">← ${prevText}</a>` || ''
+        let next = nextLesson && `<a data-lesson="${nextLesson}">${nextText} →</a>` || ''
+
         let prevNextNav = document.createElement('DIV')
         prevNextNav.innerHTML = `<nav><ul><li>${prev}</li><li>${next}</li></ul></nav>`
+
         this.el.append(prevNextNav)
     }
 }
