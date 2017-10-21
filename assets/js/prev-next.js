@@ -12,7 +12,8 @@ export class PrevNextNav {
     }
 
     getLesson(dir) {
-        let el = this.nav.querySelector('.selected')[`${dir}ElementSibling`]
+        let sel = this.nav.querySelector('.selected')
+        let el = sel && sel[`${dir}ElementSibling`]
 
         let lesson = el && el.querySelector('a').dataset.lesson || null
         let text = el && el.querySelector('a').innerHTML || null
