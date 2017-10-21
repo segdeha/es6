@@ -3,7 +3,7 @@
  */
 
 import { a as ajax } from './ajax.js'
-import { PrevNextNav } from './next-prev.js'
+import { PrevNextNav } from './prev-next.js'
 
 export class LessonManager {
     constructor(el, nav) {
@@ -13,7 +13,7 @@ export class LessonManager {
     getLessonFromURL() {
         let navLessons = (function () {
             let lessons = []
-            let lessonLinks = document.querySelectorAll('#everything-that-is-not-a-lesson nav a[data-lesson]')
+            let lessonLinks = document.querySelectorAll('#everything-that-is-not-a-lesson a[data-lesson]')
             lessonLinks.forEach((link) => {
                 lessons.push(link.dataset.lesson)
             })
@@ -24,8 +24,8 @@ export class LessonManager {
     }
 
     async fetch(lesson) {
-        return new Promise(function (resolve, reject) {
-            ajax(`lessons/${lesson}.md`, function (xhr) {
+        return new Promise((resolve, reject) => {
+            ajax(`lessons/${lesson}.md`, (xhr) => {
                 if (xhr.status < 400) {
                     resolve(xhr.responseText)
                 }
@@ -61,7 +61,7 @@ export class LessonManager {
         }, 150)
     }
 
-    async enable(lesson) {
+    async set(lesson) {
         let md = await this.fetch(lesson)
         this.render(md)
     }

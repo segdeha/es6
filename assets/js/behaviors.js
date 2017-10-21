@@ -7,7 +7,7 @@ function init() {
 
     let lm = new LessonManager(el, nav)
     let lesson = lm.getLessonFromURL()
-    lm.enable(lesson)
+    lm.set(lesson)
 
     // special case non-nav lessons (currently only 'colophon')
     Navigation.update(['colophon'].includes(lesson) ? '' : lesson)
@@ -20,12 +20,12 @@ function init() {
             document.querySelector('.fidget-spinner').classList.add('show')
 
             let lesson = evt.target.dataset.lesson
-            lm.enable(lesson)
+            lm.set(lesson)
 
             window.history.pushState({}, '', lesson)
 
             // special case non-nav lessons (currently only 'colophon')
-            Navigation.update(nonNavLessons.includes(lesson) ? '' : lesson)
+            Navigation.update(['colophon'].includes(lesson) ? '' : lesson)
         }
     })
 }
