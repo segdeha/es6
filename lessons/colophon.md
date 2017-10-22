@@ -118,7 +118,7 @@ From `lesson-manager.js`:
 
     ajax(`lessons/${lesson}.md`, (xhr) => {…})
 
-    setTimeout(() => {…}
+    setTimeout(() => {…})
 
     // highlight only blocks of code (not inline code)
     document.querySelectorAll('pre code')
