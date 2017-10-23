@@ -4,7 +4,7 @@
 	--lesson-link-visited: purple;
 
     /* navigation sidebar */
-    --sidebar-background: #262626;
+    --sidebar-background: rgba(0,0,0,0.88);
     --sidebar-color: #fcc28c;
     --sidebar-selected-color: white;
     --sidebar-width: 20rem;
@@ -89,6 +89,7 @@ code {
     }
 
 #everything-that-is-not-a-lesson {
+    background: var(--sidebar-background);
     position: fixed;
     top: 0;
     width: var(--sidebar-width);
@@ -99,7 +100,6 @@ code {
     #everything-that-is-not-a-lesson,
     #everything-that-is-not-a-lesson a,
     #everything-that-is-not-a-lesson a:visited {
-        background: var(--sidebar-background);
         color: var(--sidebar-color);
     }
         #everything-that-is-not-a-lesson .selected,
@@ -174,3 +174,37 @@ code {
     .fidget-spinner.show {
         opacity: 1;
     }
+
+/* hamburger menu (literally) */
+.hamburger {
+	 display: none;
+	 float: right;
+	 height: 24px;
+	 margin-top: 10px;
+	 width: 32px;
+}
+
+@media (max-width: 865px) {
+	section {
+		min-height: 0vw;
+	}
+	#everything-that-is-not-a-lesson {
+		max-height: 64px;
+		left: 0;
+		overflow: hidden;
+		right: 0;
+		transition: max-height  0.15s ease;
+		width: auto;
+		z-index: 100;
+	}
+		#everything-that-is-not-a-lesson.show {
+			max-height: 100vh;
+		}
+	#lesson {
+		margin-left: auto;
+		margin-top: 100px;
+	}
+	.hamburger {
+		display: inline-block;
+	}
+}

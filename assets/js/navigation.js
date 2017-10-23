@@ -2,6 +2,15 @@
  * Navigation
  */
 export class Navigation {
+    // toggle hamburger menu
+    static toggleMenu() {
+        document.getElementById('everything-that-is-not-a-lesson').classList.toggle('show')
+    }
+
+    static hideMenu() {
+        document.getElementById('everything-that-is-not-a-lesson').classList.remove('show')
+    }
+
     static update(lesson) {
         let baseElement = document.querySelector('#everything-that-is-not-a-lesson nav')
 
@@ -15,6 +24,7 @@ export class Navigation {
         let newlySelected = baseElement.querySelector(`[data-lesson="${lesson}"]`)
         if (newlySelected) {
             newlySelected.parentNode.classList.add('selected')
+            this.hideMenu()
         }
     }
 }

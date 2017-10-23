@@ -28,6 +28,9 @@ function init() {
             Navigation.update(['colophon'].includes(lesson) ? '' : lesson)
         }
     })
+
+    // show/hide navigation on mobile
+    document.querySelector('.hamburger').addEventListener('click', Navigation.toggleMenu)
 }
 
 document.addEventListener('DOMContentLoaded', init)

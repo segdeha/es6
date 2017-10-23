@@ -16,7 +16,7 @@ The main disadvantage of this approach is that Markdown syntax lacks the ability
 
 I used [Panic’s Coda](https://panic.com/coda/) as my IDE for coding the site. It lacks many [features of serious IDEs](https://www.jetbrains.com/webstorm/features/), but is great for simple sites like this one.
 
-The [animated fidget spinner loading icon](https://loading.io/spinner/fidget-spinner/-fidget-spinner) comes courtesy of [loading.io](https://loading.io).
+The [animated fidget spinner loading icon](https://loading.io/spinner/fidget-spinner/-fidget-spinner) comes courtesy of [loading.io](https://loading.io). The hamburger menu icon comes courtesy of [flaticon.com](https://www.flaticon.com/free-icon/burger_597935).
 
 ### Libraries used
 
