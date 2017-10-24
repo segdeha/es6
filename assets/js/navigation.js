@@ -24,7 +24,9 @@ export class Navigation {
         let newlySelected = baseElement.querySelector(`[data-lesson="${lesson}"]`)
         if (newlySelected) {
             newlySelected.parentNode.classList.add('selected')
-            this.hideMenu()
         }
+
+        // hide hamburger menu
+        this.hideMenu()
     }
 }
