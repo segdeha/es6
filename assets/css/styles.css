@@ -1,7 +1,7 @@
 :root {
-	/* links */
-	--lesson-link-color: blue;
-	--lesson-link-visited: purple;
+    /* links */
+    --lesson-link-color: blue;
+    --lesson-link-visited: purple;
 
     /* navigation sidebar */
     --sidebar-background: rgba(0,0,0,0.88);
@@ -70,11 +70,11 @@ a {
 
 /* used for "run it" links */
 strong em a {
-	font-style: normal;
-	font-weight: normal;
-	font-size: 80%;
-	position: relative;
-	top: -1em;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80%;
+    position: relative;
+    top: -1em;
 }
 
 code {
@@ -121,38 +121,38 @@ code {
         opacity: 0;
     }
     #lesson a {
-	    color: var(--lesson-link-color);
+        color: var(--lesson-link-color);
     }
-	    #lesson a:hover {
-	        border-bottom-color: blue;
-	    }
-	    #lesson a:visited {
-	        color: var(--lesson-link-visited);
-	    }
-		    #lesson a:visited:hover {
-		        border-bottom-color: purple;
-		    }
+        #lesson a:hover {
+            border-bottom-color: blue;
+        }
+        #lesson a:visited {
+            color: var(--lesson-link-visited);
+        }
+            #lesson a:visited:hover {
+                border-bottom-color: purple;
+            }
     #lesson nav {
-	    border-color: var(--lesson-color);
+        border-color: var(--lesson-color);
     }
-	    #lesson nav ul {
-		    display: table;
-		    list-style: none;
-		    margin: 1em 0;
-		    padding: 0;
-		    width: 100%;
-	    }
-		    #lesson nav ul li {
-			    display: table-cell;
-			    width: 50%;
-		    }
-			    #lesson nav ul li a {
-				    font-size: 80%;
-			    }
-			    #lesson nav ul li:first-child {}
-			    #lesson nav ul li:last-child {
-				    text-align: right;
-			    }
+        #lesson nav ul {
+            display: table;
+            list-style: none;
+            margin: 1em 0;
+            padding: 0;
+            width: 100%;
+        }
+            #lesson nav ul li {
+                display: table-cell;
+                width: 50%;
+            }
+                #lesson nav ul li a {
+                    font-size: 80%;
+                }
+                #lesson nav ul li:first-child {}
+                #lesson nav ul li:last-child {
+                    text-align: right;
+                }
 
 /* overrides to the default highlighter.js theme */
 .hljs {
@@ -177,35 +177,35 @@ code {
 
 /* hamburger menu (literally) */
 .hamburger {
-	 display: none;
-	 float: right;
-	 height: 24px;
-	 margin-top: 10px;
-	 width: 32px;
+     display: none;
+     float: right;
+     height: 24px;
+     margin-top: 10px;
+     width: 32px;
 }
 
 @media (max-width: 865px) {
-	section {
-		min-height: 0vw;
-	}
-	#everything-that-is-not-a-lesson {
-		max-height: 64px;
-		left: 0;
-		overflow: hidden;
-		right: 0;
-		transition: max-height  0.15s ease;
-		width: auto;
-		z-index: 100;
-	}
-		#everything-that-is-not-a-lesson.show {
-			max-height: 100vh;
-		}
-	#lesson {
-		margin-left: auto;
-		margin-top: 100px;
-	    min-width: 0;
-	}
-	.hamburger {
-		display: inline-block;
-	}
+    section {
+        min-height: 0vw;
+    }
+    #everything-that-is-not-a-lesson {
+        max-height: 64px;
+        left: 0;
+        overflow: hidden;
+        right: 0;
+        transition: max-height  0.15s ease;
+        width: auto;
+        z-index: 100;
+    }
+        #everything-that-is-not-a-lesson.show {
+            max-height: 100vh;
+        }
+    #lesson {
+        margin-left: auto;
+        margin-top: 100px;
+        min-width: 0;
+    }
+    .hamburger {
+        display: inline-block;
+    }
 }
