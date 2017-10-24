@@ -203,6 +203,7 @@ code {
 	#lesson {
 		margin-left: auto;
 		margin-top: 100px;
+	    min-width: 0;
 	}
 	.hamburger {
 		display: inline-block;
