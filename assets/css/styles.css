@@ -16,6 +16,9 @@
 
     /* code blocks */
     --code-background: #333;
+
+    /* small-screens */
+    --ss-font-size: 18px;
 }
 
 body {
@@ -185,6 +188,9 @@ code {
 }
 
 @media (max-width: 865px) {
+    body {
+        font-size: var(--ss-font-size);
+    }
     section {
         min-height: 0vw;
     }
