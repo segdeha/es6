@@ -8,7 +8,7 @@ This site uses some cutting-edge JavaScript features, but is in many ways an hom
 
 The way the site works is to fetch [Markdown](https://daringfireball.net/projects/markdown/syntax) files via [Ajax](http://adaptivepath.org/ideas/ajax-new-approach-web-applications/), convert them to HTML, add the HTML to the DOM, then apply syntax highlighting.
 
-The big advantage of this approach is that it means I can keep the actual lessons in simple text files and edit them using [MacDown](http://macdown.uranusjr.com).
+The big advantage of this approach is that it means I can keep the actual lessons in simple text files and edit them using [MacDown](http://macdown.uranusjr.com). A bonus of using Markdown files is that you can easily [read the lessons from the GitHub repo](https://github.com/segdeha/es6/tree/master/lessons)!
 
 I love that the site is just a couple hundred lines of un-minified HTML, CSS, and JavaScript. The focus is on the content, as it should be.
 
@@ -21,8 +21,8 @@ The [animated fidget spinner loading icon](https://loading.io/spinner/fidget-spi
 ### Libraries used
 
 - [Markdown parser](https://github.com/cadorn/markdown-js)
+- [Syntax highlighter](https://highlightjs.org)
 - [Ajax in 120 characters](https://gist.github.com/segdeha/5601610) (modified slightly to behave as a module)
-- [Syntax highlighter](https://highlightjs.org/)
 
 ## ES8 Features Used
 
