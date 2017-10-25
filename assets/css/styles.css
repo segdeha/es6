@@ -1,4 +1,19 @@
 :root {
+    /* typography */
+    --font-size: 16px;
+    --line-height: 1.5;
+
+    /* code blocks */
+    --code-font-size: 14px;
+    --code-line-height: 1.25;
+
+    /* small-screens */
+    --ss-font-size: 18px;
+
+    /* animations */
+    --transition-duration: 0.25s;
+    --transition-easing: ease;
+
     /* links */
     --lesson-link-color: blue;
     --lesson-link-visited: purple;
@@ -16,13 +31,10 @@
 
     /* code blocks */
     --code-background: #333;
-
-    /* small-screens */
-    --ss-font-size: 18px;
 }
 
 body {
-    font: 16px/1.5 'Source Sans Pro', Sans-Serif;
+    font: var(--font-size)/var(--line-height) 'Source Sans Pro', Sans-Serif;
     margin: 0;
     padding: 0;
 }
@@ -50,7 +62,7 @@ footer {
 }
 
 nav, footer {
-    border-top: solid 1px #fcc28c;
+    border-top: solid 1px var(--sidebar-color);
 }
 
 h1 {
@@ -82,7 +94,7 @@ strong em a {
 
 code {
     background: var(--lesson-code-background); /* for inline code elements */
-    font: 14px/1.25 'Source Code Pro', monospace;
+    font: var(--code-font-size)/var(--code-line-height) 'Source Code Pro', monospace;
     padding: 0 0.25em;
 }
     h2 code, h3 code {
@@ -118,7 +130,7 @@ code {
     max-width: 50em;
     min-width: 30em;
     opacity: 1;
-    transition: opacity 0.15s ease;
+    transition: opacity var(--transition-duration) var(--transition-easing);
 }
     #lesson.hide {
         opacity: 0;
@@ -127,13 +139,13 @@ code {
         color: var(--lesson-link-color);
     }
         #lesson a:hover {
-            border-bottom-color: blue;
+            border-bottom-color: var(--lesson-link-color);
         }
         #lesson a:visited {
             color: var(--lesson-link-visited);
         }
             #lesson a:visited:hover {
-                border-bottom-color: purple;
+                border-bottom-color: var(--lesson-link-visited);
             }
     #lesson nav {
         border-color: var(--lesson-color);
@@ -173,7 +185,7 @@ code {
     height: 32px;
     opacity: 0;
     position: relative;
-    transition: opacity 0.25s ease;
+    transition: opacity var(--transition-duration) var(--transition-easing);
     width: 32px;
 }
     .fidget-spinner.show {
@@ -201,7 +213,7 @@ code {
         left: 0;
         overflow: hidden;
         right: 0;
-        transition: max-height  0.15s ease;
+        transition: max-height var(--transition-duration) var(--transition-easing);
         width: auto;
         z-index: 100;
     }
