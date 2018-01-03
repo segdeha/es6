@@ -32,7 +32,7 @@ The above returns `1` plus whatever number you pass to it, as follows:
 
 ## Notes on Syntax
 
-The named argument before the arrow becomes a variable in the function scope. If you have more than 1 named argument, you’ll need to put them in parentheses.
+The named argument before the “fat arrow” becomes a variable in the function scope. If you have more than 1 named argument, you’ll need to put them in parentheses.
 
 Whatever is after the fat arrow is the return value. That can consist of more than a simple value or expression, as in the following example:
 
