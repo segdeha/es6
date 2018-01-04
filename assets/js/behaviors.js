@@ -12,7 +12,7 @@ function init() {
     // special case non-nav lessons (currently only 'colophon')
     Navigation.update(['colophon'].includes(lesson) ? '' : lesson)
 
-    // only intercept clicks in the <nav>
+    // only intercept clicks on lesson links
     document.querySelector('body').addEventListener('click', (evt) => {
         if (evt.target.matches('a[data-lesson]')) {
             evt.preventDefault() // inside the condition to allow <a href> links to work
