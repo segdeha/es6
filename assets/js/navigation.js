@@ -12,7 +12,7 @@ export class Navigation {
     }
 
     static update(lesson) {
-        let baseElement = document.querySelector('#everything-that-is-not-a-lesson nav')
+        let baseElement = document.getElementById('everything-that-is-not-a-lesson')
 
         // select the selected selection and unselect it
         let selected = baseElement.querySelector('li.selected')
