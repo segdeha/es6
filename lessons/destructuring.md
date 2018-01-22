@@ -33,7 +33,7 @@ In the above example, we assign the `list` property to a variable with the same 
 
     const { list: list_items } = this.props
 
-I don’t know about you, but that looks a little backwards to me. Oh well, that’s how it works! ¯\\\_(ツ)_/¯
+I don’t know about you, but that looks backwards to me. Oh well, that’s how it works! ¯\\\_(ツ)_/¯
 
 ## Array Destructuring
 
