@@ -9,7 +9,7 @@ From the `<head>` element in `index.html`:
     <script defer type="module" src="assets/js/ajax.js"></script>
     <script defer type="module" src="assets/js/behaviors.js"></script>
 
-**Note:** The `type="module"` attribute is required on both the exported script and the importing script tags.
+**Note:** The `type="module"` attribute is required on both the exported and importing script tags.
 
 From `ajax.js`:
 
