@@ -2,7 +2,7 @@
 
 In earlier versions of JavaScript, scope is defined at the function level except for the top-level, “global” scope, which is accessible everywhere.
 
-The following example should look familiar:
+The following shows how function scope works:
 
     var x = 1;
     var y = 2;
