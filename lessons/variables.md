@@ -4,7 +4,7 @@ In older versions of JavaScript, the following was the only way to declare a var
 
     var myVariable = 42;
 
-These variables were (still are, actually) scoped to the function in which they are created (or to the “global” scope if at the top level).
+A variable delared this way was (still is, actually) scoped to the function in which it is created (or to the “global” scope if at the top level).
 
 In ES6, we have at our disposal the following 2 new ways to declare variables:
 
