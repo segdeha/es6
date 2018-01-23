@@ -1,6 +1,6 @@
 # Introduction
 
-ES6 (officially [ECMAScript 2015 Language](http://www.ecma-international.org/ecma-262/6.0/)) represents a major upgrade to the JavaScript language. It adds several important features and makes it simpler to write error-free code.
+ES6 (officially [ECMAScript 2015](http://www.ecma-international.org/ecma-262/6.0/)) represents a major upgrade to the JavaScript language. It adds several important features and makes it simpler to write error-free code.
 
 As of January 2018, ES6 is [extremely well-supported by modern web browsers](https://kangax.github.io/compat-table/es6/). The latest versions of Chrome, Safari, Firefox, and Edge all support nearly every feature of ES6 (as well as [the 2 new features of ES7](http://2ality.com/2016/01/ecmascript-2016.html)).
 
