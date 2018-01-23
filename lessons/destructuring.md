@@ -45,7 +45,7 @@ Array destructuring is very similar to object destructing as demonstrated in the
 
 **_[Run it](https://repl.it/MsKG)_**
 
-A real-world use for array destructuring is grabbing the match from regular expression matches, as in the following example:
+A real-world use for array destructuring is grabbing the captured string from a regular expression match, as in the following example:
 
     const str = 'bey@knowles.com'
     const rgx = /\@(\w+\.\w+)/
@@ -59,18 +59,22 @@ A fairly common task in technical interviews is to swap the values for 2 variabl
 
 In ES6:
 
-    const list = [ 1, 2, 3 ]
-    let [ a, , b ] = list; // note: we skip the 2nd value
+    let a = 1
+    let b = 2
+    console.log(a, b); // logs 1 2
     [ b, a ] = [ a, b ]
-    console.log(a, b) // logs 3 1
+    console.log(a, b) // logs 2 1
 
 **_[Run it](https://repl.it/MsKv)_**
 
 The same operation, before ES6:
 
-    var list = [ 1, 2, 3 ];
-    var a = list[0], b = list[2];
-    var tmp = a; a = b; b = tmp;
-    console.log(a, b) // logs 3 1
+    var a = 1;
+    var b = 2;
+    console.log(a, b); // logs 1 2
+    var tmp = a;
+    a = b;
+    b = tmp;
+    console.log(a, b); // logs 2 1
 
 **_[Run it](https://repl.it/MsKP)_**
