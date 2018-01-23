@@ -26,7 +26,7 @@ To appreciate how big of a deal `const` is, the following is what it took in ES5
         configurable: false
     });
 
-This doesn’t mean the value of a `const` can’t change. E.g., you can assign an object to it and then change one of the properties. In other words, the [variable is not “immutable”](https://mathiasbynens.be/notes/es6-const) in a technical sense. It only means you can only once bind a value to the variable.
+**Note:** This doesn’t mean the value of a `const` can’t change. E.g., you can assign an object to it and then change one of the properties. In other words, the [variable is not “immutable”](https://mathiasbynens.be/notes/es6-const) in a technical sense. It only means you can only once bind a value to the variable.
 
 For full immutability, you can use `Object.freeze` or a library such as [Immutable.js](https://facebook.github.io/immutable-js/).
 
