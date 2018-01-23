@@ -1,6 +1,6 @@
 # Variable Assignment
 
-In older versions of JavaScript, there was essentially the following one way to declare variables:
+In older versions of JavaScript, the following was the only way to declare a variable:
 
     var myVariable = 42;
 
