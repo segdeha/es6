@@ -55,7 +55,7 @@ In ES6, you can use arrow functions anywhere you would have used anonymous funct
         var that = this;
         this.genus = 'Canis';
         document.querySelector('button')
-            .addEventListener(function (evt) {
+            .addEventListener('click', function (evt) {
                 // `this` is the DOM element clicked
                 alert(that.genus); // alerts 'Canis'
             });
@@ -67,7 +67,7 @@ Later on, `Function.bind` was introduced and we could get the `this` we wanted a
     function Dog() {
         this.genus = 'Canis';
         document.querySelector('button')
-            .addEventListener(function (evt) {
+            .addEventListener('click', function (evt) {
                 // `this` is the current instance of `Dog`
                 alert(this.genus); // alerts 'Canis'
             }.bind(this));
@@ -89,7 +89,7 @@ Here is the `Dog` example from above, re-written.
     function Dog() {
         this.genus = 'Canis'
         document.querySelector('button')
-            .addEventListener(evt => {
+            .addEventListener('click', evt => {
                 // `this` is the current instance of `Dog`
                 alert(this.genus) // alerts 'Canis'
             })
