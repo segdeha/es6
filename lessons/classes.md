@@ -2,9 +2,43 @@
 
 A class is a way to encapsulate data and methods. You create instances of what is, essentially, a blueprint of a thing.
 
-JavaScript has always had the ability to do this, but its prototypal nature made *zero* sense to folks coming from other (especially classical OOP) languages.
+Though different in nature from classical OOP languages, the simple case of creating instances from classes has always been fairly straightforward to do in JavaScript. What ES6 gives us is a new `class` keyword that makes for a cleaner syntax.
 
-Before ES6:
+ES5 and before:
+
+    function Animal(legs) {
+        this.legs = legs || 0;
+    }
+
+    Animal.prototype.move = function () {
+        if (this.legs > 0) {
+            console.log('walk');
+        }
+        else {
+            console.log('slither');
+        }
+    };
+
+ES6:
+
+    class Animal {
+        constructor(legs = 0) {
+            this.legs = legs
+        }
+
+        move() {
+            if (this.legs > 0) {
+                console.log('walk')
+            }
+            else {
+                console.log('slither')
+            }
+        }
+    }
+
+Where things got confusing—especially for programmers coming from other languages—was in how older versions of JavaScript implemented class inheritance. Consider the following…
+
+ES5 and before:
 
     function Animal(legs) {
         this.legs = legs || 0;
