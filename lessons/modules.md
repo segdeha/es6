@@ -6,10 +6,7 @@ This site uses modules to import a simple Ajax library. (I didn’t need to do i
 
 From the `<head>` element in `index.html`:
 
-    <script defer type="module" src="assets/js/ajax.js"></script>
     <script defer type="module" src="assets/js/behaviors.js"></script>
-
-**Note:** The `type="module"` attribute is required on both the exported and importing script tags.
 
 From `ajax.js`:
 
@@ -19,7 +16,7 @@ From `ajax.js`:
     // insta-module, voilá
     export { a }
 
-From `behaviors.js`:
+From `lesson-manager.js`:
 
     import { a as ajax } from './ajax.js'
 
