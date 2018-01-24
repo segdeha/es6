@@ -1,6 +1,6 @@
 # Block Scope
 
-In earlier versions of JavaScript, scope is defined at the function level except for the top-level, “global” scope, which is accessible everywhere.
+In earlier versions of JavaScript, scope is defined within **functions.** Variables defined in a function’s scope are only accessible within that function. The exception is the “global” scope, which exists outside any functions and is accessible everywhere.
 
 The following shows how function scope works:
 
@@ -9,16 +9,19 @@ The following shows how function scope works:
 
     function printer() {
         var x = 3;
+        var z = 4;
         console.log(x); // logs 3
         console.log(y); // logs 2
+        console.log(z); // logs 4
     }
 
     printer();
     console.log(x); // logs 1
+    console.log(z); // throws a ReferenceError
 
 **_[Run it](https://repl.it/MsJa)_**
 
-ES6 adds another scope: block scope. This means you can create variables that are available only inside blocks (e.g., within a conditional or a loop). Blocks are kind of like Vegas. _What happens in blocks stays in blocks!_
+ES6 adds another scope: block scope. This means you can create variables that are available only inside **blocks** (e.g., within a conditional or a loop). Blocks are kind of like Vegas. _What happens in blocks stays in blocks!_
 
     let x = 1
 
