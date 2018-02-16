@@ -36,11 +36,11 @@ export class LessonManager {
         })
     }
 
-	// pre-fetch the next lesson (if there is one)
-	async preFetch() {
-		let nextLesson = this.prevNext.getLesson('next')
-		let md = await this.fetch(nextLesson.lesson)
-	}
+    // pre-fetch the next lesson (if there is one)
+    async preFetch() {
+        let nextLesson = this.prevNext.getLesson('next')
+        let md = await this.fetch(nextLesson.lesson)
+    }
 
     render(md) {
         let html = markdown.toHTML(md)
