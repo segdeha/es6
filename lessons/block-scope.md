@@ -1,6 +1,6 @@
 # Block Scope
 
-In earlier versions of JavaScript, scope is defined within **functions.** Variables defined in a function’s scope are only accessible within that function. The exception is the “global” scope, which exists outside any functions and is accessible everywhere.
+In earlier versions of JavaScript, scope is defined within **functions.** Variables defined in a function’s scope are only accessible within that function. The exception is the “global” scope, which exists outside any function and is accessible everywhere.
 
 The following shows how function scope works:
 
