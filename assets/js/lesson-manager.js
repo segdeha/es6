@@ -37,6 +37,8 @@ export class LessonManager {
     }
 
     // pre-fetch the next lesson (if there is one)
+    // note: we aren’t doing anything with the result
+    // other than relying on native browser caching
     async preFetch() {
         let nextLesson = this.prevNext.getLesson('next')
         let md = await this.fetch(nextLesson.lesson)
