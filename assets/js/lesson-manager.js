@@ -49,7 +49,9 @@ export class LessonManager {
         let lessonContainer = document.getElementById('lesson')
         lessonContainer.classList.add('hide')
 
+        // wait until old lesson has faded out
         setTimeout(() => {
+            // replace with new lesson’s html
             lessonContainer.innerHTML = html
 
             // highlight only blocks of code (not inline code)
@@ -57,13 +59,17 @@ export class LessonManager {
                 hljs.highlightBlock(block)
             })
 
-            // scroll to the top
+            // on next paint
             window.requestAnimationFrame(() => {
+                // scroll to the top
                 window.scrollTo(0, 0)
 
+                // fade-in the lesson
                 lessonContainer.classList.remove('hide')
+                // fade-out the loading spinner
                 document.querySelector('.fidget-spinner').classList.remove('show')
 
+                // display the prev/next nav
                 this.prevNext.render()
             })
         }, 150)
