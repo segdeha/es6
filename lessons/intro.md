@@ -10,9 +10,9 @@ This site is not intended to be [a complete compendium of ES6 features](http://e
 
 Codes blocks (such as the example below) can be copied & pasted into and run in the [ES6 REPL](https://repl.it/languages/babel). Most of them also have a “Run it” link to the REPL with that example pre-loaded. Try it. You’ll like it!
 
-    const words = ['love', 'ES6']
+    const words = ['❤️', 'ES6']
     const [ feeling, version ] = words
-    // logs 'I love ES6!'
+    // logs 'I ❤️ ES6!'
     console.log(`I ${feeling} ${version}!`)
 
 **_[Run it](https://repl.it/MsHN)_**
