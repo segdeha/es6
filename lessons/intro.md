@@ -8,7 +8,7 @@ What about older browsers, you ask? In a production environment where you need t
 
 This site is not intended to be [a complete compendium of ES6 features](http://es6-features.org). Think of it more as a “greatest hits”.
 
-Codes blocks (such as the example below) can be copied & pasted into and run in the [ES6 REPL](https://repl.it/languages/babel). Most of them also have a “Run it” link to the REPL with that example pre-loaded. Try it. You’ll like it!
+Code blocks (such as the example below) can be copied & pasted into and run in the [ES6 REPL](https://repl.it/languages/babel). Most of them also have a “Run it” link to the REPL with that example pre-loaded. Try it. You’ll like it!
 
     const words = ['❤️', 'ES6']
     const [ feeling, version ] = words
