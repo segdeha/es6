@@ -47,4 +47,4 @@ You can even use the return value from a function!
 
 **_[Run it](https://repl.it/MsJ5)_**
 
-There’s a bunch more you can do with template literals. For more advanced uses, see [the template literals article on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals).
+There’s a bunch more you can do with template literals. For more advanced uses, see [the template literals article on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) or this [presentation I made on the topic](https://segdeha.com/es6-templates).
