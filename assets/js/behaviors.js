@@ -1,7 +1,7 @@
 import { LessonManager } from './lesson-manager.js'
 import { Navigation } from './navigation.js'
 import { Konami } from './konami.js'
-import { unicorns } from './unicorns.js'
+import unicorns from './unicorns.js'
 
 function init() {
     let el = document.querySelector('#lesson')
