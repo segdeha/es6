@@ -11,7 +11,7 @@ In ES6, we have at our disposal the following 2 new ways to declare variables:
     let myVariable = 42;
     const myOtherVariable = 'forty two';
 
-We’ll cover changes in how these are scoped in a later lesson, but for now understand the following distinction between them:
+We’ll cover changes in how these are scoped in [a later lesson](/es6/block-scope), but for now understand the following distinction between them:
 
 - `let` is for variables that you may want to reassign
 - `const` is for variables that you don’t want to reassign
