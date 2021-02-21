@@ -1,6 +1,6 @@
 # Classes
 
-A class is a way to encapsulate data and methods. You create instances of what is, essentially, a blueprint of a thing.
+A class is a way to encapsulate data and methods. You create instances from what is, essentially, a blueprint of a thing.
 
 Though different in nature from classical OOP languages, the simple case of creating instances from classes has always been fairly straightforward to do in JavaScript. What ES6 gives us is a new `class` keyword that makes for a cleaner syntax.
 
